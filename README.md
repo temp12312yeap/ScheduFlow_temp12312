@@ -1,14 +1,38 @@
-# vue
-
+# https://scheduflow.web.app
 This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+## How To Contribute
+- WSL Ubuntu 22.04 LTS
+- vim
+- html/css
+- vue.js
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## How To Deploy
+### STG dev  ( https://scheduflow.web.app )
+```bash
+# manual firebase cmd*
+$ firebase deploy
+=== Deploying to 'scheduflow'...
 
-## Customize configuration
+i  deploying hosting
+i  hosting[scheduflow]: beginning deploy...
+i  hosting[scheduflow]: found 89 files in /
+✔  hosting[scheduflow]: file upload complete
+i  hosting[scheduflow]: finalizing version...
+✔  hosting[scheduflow]: version finalized
+i  hosting[scheduflow]: releasing new version...
+✔  hosting[scheduflow]: release complete
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+✔  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/scheduflow/overview
+Hosting URL: https://scheduflow.web.app
+```
+### STG prod ( choi3179.github.io )
+
+|STG|BRANCH|TRIGGER|URL|
+|------|---|---|---|
+|DEV|Branch of PR|manual firebase cmd|[https://scheduflow.web.app](https://scheduflow.web.app)|
 
 ## Project Setup
 
