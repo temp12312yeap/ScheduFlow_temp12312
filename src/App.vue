@@ -4,12 +4,12 @@ import TheWelcome from './components/TheWelcome.vue'
 import CompleteSchedule from './components/CompleteSchedule.vue'
 import Contributions from './components/Contributions.vue'
 import MemberStatus from './components/MemberStatus.vue'
-import Calendar from './components/Calendar.vue'
+//import Calendar from './components/Calendar.vue'
 </script>
 
 <template>
 	<CompleteSchedule />
-	<Calendar />
+<!--	<Calendar />-->
 	<MemberStatus />
 	<Contributions /> 
 </template>
