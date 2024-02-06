@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "scheduflow",
+    "public": "/",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
