@@ -1,7 +1,25 @@
 <script setup>
+	import {ref, watch} from 'vue'
 
+	const memberData = ref(null)
+	
+	async function fetchData() {
+		memberData.value = null
+		 const res = await fetch (
+			`http://localhost:3000/members` 
+		)
+		memberData.value  = await res.json()
+	}
+	fetchData()
+	
 </script>
 
 <template>
-	유저 일정 참여 여부
+	<ol>
+		<li v-for="(member, index) in memberData"> 
+			<pre>
+				{{member.status}} - {{member.id}}
+			</pre>
+		</li> 
+	</ol>
 </template>
