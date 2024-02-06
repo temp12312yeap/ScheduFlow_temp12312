@@ -6,7 +6,7 @@
 	async function fetchData() {
 		memberData.value = null
 		 const res = await fetch (
-			`http://localhost:3000/members` 
+			`https://scheduflow-json-server.fly.dev/schedules` 
 		)
 		memberData.value  = await res.json()
 	}
