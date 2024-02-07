@@ -21,10 +21,7 @@ import Calendar from './components/Calendar.vue'
 </script>
 <template>
 
-	<CompleteSchedule :jsonData="jsonData" />
-	<div class="calendar-app">
-		<Calendar />
-	</div>
+	
 
 	<div class = "body">
 		<div class="top">
@@ -41,17 +38,12 @@ import Calendar from './components/Calendar.vue'
                		</div>
 		        <div class="sdule">
                         	<p>Completed Schedule </p>
-                        <CompleteSchedule />
+							<CompleteSchedule :jsonData="jsonData" />
 			</div>
                 </div>
 
- 		 
-
 		<div class="inline">
-	
 
-	
-		
 	 	 <div class = "contrib">
                         <Contributions />
                 </div>
@@ -62,7 +54,6 @@ import Calendar from './components/Calendar.vue'
 
 </template>
 
-<style lang="css">
 <style scoped>
 	.label {
 		margin-left: 5px;
