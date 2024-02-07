@@ -31,4 +31,5 @@ coverage
 
 # Firebase Hosting Cache
 .firebase/
-docs
+docs/*
+
