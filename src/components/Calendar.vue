@@ -1,5 +1,7 @@
 <script setup>
 import { ref, watch, onUpdated } from 'vue'
+
+
 import FullCalendar from '@fullcalendar/vue3'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
@@ -24,6 +26,9 @@ var calendarOptions = {
 	
 }
 
+const props = defineProps({
+  jsonData: Object
+})
 
 async function fetchData() {
 		console.log(calendarOptions.initialEvents)
