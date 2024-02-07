@@ -2,7 +2,7 @@
   <div>
     <label for="projectName">Enter Project Name:</label>
     <input type="text" id="projectName" v-model="selectedProjectName" />
-<!--    <button @click="fetchProjectData">Fetch Project Data</button>-->
+    <button @click="fetchProjectData">Fetch Project Data</button>
 
     <div v-for="schedule in filteredSchedules" :key="schedule.id">
       <h1>{{ schedule.name }}</h1>
@@ -33,6 +33,9 @@ const selectedProjectName = ref('');
 const loading = ref(false);
 const error = ref(false);
 
+// 초기에는 빈 배열로 설정
+const filteredSchedules = ref([]);
+
 async function fetchData() {
   try {
     const res = await fetch('https://scheduflow-json-server.fly.dev/schedules');
@@ -44,22 +47,15 @@ async function fetchData() {
   }
 }
 
-// 프로젝트 이름으로 필터링된 데이터
-/*const filteredSchedules = computed(() => {
-  return schedules.value.filter(schedule => schedule.name === selectedProjectName.value);
-});
-*/
-const filteredSchedules = computed(() => {
-  return schedules.value.filter(schedule =>
-    selectedProjectName.value === '' || schedule.name.toLowerCase().includes(selectedProjectName.value)
-  );
-});
 async function fetchProjectData() {
   loading.value = true;
   error.value = false;
+  
+  // 데이터를 로드한 후에 필터링
   try {
     const res = await fetch('https://scheduflow-json-server.fly.dev/schedules');
     schedules.value = await res.json();
+    filterSchedules();
   } catch (error) {
     console.error('Error fetching data:', error);
     loading.value = false;
@@ -68,8 +64,15 @@ async function fetchProjectData() {
   loading.value = false;
 }
 
+function filterSchedules() {
+  filteredSchedules.value = schedules.value.filter(schedule =>
+    selectedProjectName.value === '' || schedule.name.toLowerCase().includes(selectedProjectName.value.toLowerCase())
+  );
+}
+
 onMounted(() => {
-  fetchData();
+  // 초기에는 데이터를 로드하지 않고 필터링만 수행
+  filterSchedules();
 });
 </script>
 
