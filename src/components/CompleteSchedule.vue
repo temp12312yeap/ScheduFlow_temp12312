@@ -1,8 +1,8 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { fetchData } from  'scheduflow'
 
-const project = ref()
+const project = ref(null)
 const complete = ref([]) // Initialize complete as an empty array
 
 /*
@@ -33,7 +33,7 @@ function filter() {
   }
 }
 
-filter()
+watch(() => props.jsonData, filter, { immediate: true })
 //complete.value = props.jsonData ? props.jsonData.filter(item => item.status === 'complete') : []
 //const completeItems = props.jsonData.filter(item => item.status === `complete`)
 // if (props.jsonData) {
@@ -44,12 +44,12 @@ filter()
 
 <template>
   <div>
-<h1>complete </h1>
     <ul>
-      <li v-for="item in complete" :key="item.id">
+      <li v-for="item in complete" :key="item.id" >
 	       {{ item.id }} - {{ item.name }} - {{ item.status }}
       </li>
     </ul>
 
+  
   </div>
 </template>
