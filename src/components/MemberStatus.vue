@@ -6,7 +6,7 @@
 	async function fetchData() {
 		memberData.value = null
 		 const res = await fetch (
-			`https://scheduflow-json-server.fly.dev/schedules` 
+			`https://scheduflow-json-server.fly.dev/members` 
 		)
 		memberData.value  = await res.json()
 	}
@@ -15,11 +15,10 @@
 </script>
 
 <template>
-	<ol>
+	<ul>
 		<li v-for="(member, index) in memberData"> 
-			<pre>
-				{{member.status}} - {{member.id}}
-			</pre>
+				{{member.name}} - {{member.status}}
+			
 		</li> 
-	</ol>
+	</ul>
 </template>

@@ -12,32 +12,26 @@ import Calendar from './components/Calendar.vue'
 		<div class="top">
 			<i>ScheduFlow</i>, schedule management team 
 		</div>
-	
+
+      		
+		<div class="sdule">
+			<p>Completed Schedule </p>
+			<CompleteSchedule />
+		</div>
+     		 <div class = "contrib">
+                        <Contibutions />
+                </div>
 		 <div class="inline">
 			<div class="cal">
 				<Calendar />
 			</div>
-      			<div class ="status">
-                		<p>Member Status</p>
+ 		 </div>	
+		<div class ="status">
+		<p>Member Status</p>
                         <MemberStatus />
-               		</div>
-		        <div class="sdule">
-                        	<p>Completed Schedule </p>
-                        <CompleteSchedule />
-			</div>
-                </div>
+        	</div>
 
- 		 
 
-		<div class="inline">
-	
-
-	
-		
-	 	 <div class = "contrib">
-                        <Contributions />
-                </div>
-		</div>
 
 	
 	</div>
@@ -46,37 +40,24 @@ import Calendar from './components/Calendar.vue'
 
 <style lang="css">
 <style scoped>
-	.label {
-		margin-left: 5px;
-		margin-right: 3px;
-
-	}	
 	.contrib {
-		letter-spacing: 2px;
-		width: 500px;
+		width: 700px;
 		height: 1000px;	
-		text-align: center;
-		float:left;
 	}
 	.sdule {
-		left: 10px;
                 margin-top : 2px;
-                width: 200px;
-                height : 200px;
+                width: 250px;
+                height : 180px;
                 border: 1px #9cb dashed;
                 background-color: #86B9F3;
                 border-radius: 3px;
-		float:right;
         }		
 	.cal {
 		width: 600px;
 		padding-right : 3px;
 	}
 	.status {
-		float:left;
-		letter-spacing: 2px;
-		text-align: center;
-		width: 400px;
+		width: 500px;
 		height : 500px;
 		border: 1px #9cb dashed;
 		background-color: #9bc;
