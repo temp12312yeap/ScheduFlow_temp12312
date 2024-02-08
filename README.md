@@ -1,5 +1,5 @@
-# https://scheduflow.web.app
-This template should help get you started developing with Vue 3 in Vite.
+# ScheduFlow-vue
+https://scheduflow.web.app
 
 ## How To Contribute
 - WSL Ubuntu 22.04 LTS
