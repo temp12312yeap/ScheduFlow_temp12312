@@ -37,17 +37,18 @@ Hosting URL: https://scheduflow.web.app
 ## Project Setup
 
 ```sh
-npm install
+$ npm install
+$ npm install @fullcalendar/core @fullcalendar/daygrid
 ```
 
 ### Compile and Hot-Reload for Development
 
 ```sh
-npm run dev
+$ npm run dev
 ```
 
 ### Compile and Minify for Production
 
 ```sh
-npm run build
+$ npm run build
 ```
